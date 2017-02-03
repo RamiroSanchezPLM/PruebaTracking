@@ -8,7 +8,7 @@ using System.Text;
 namespace WCFCronner
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código y en el archivo de configuración a la vez.
-    //Comentarios
+    //Comentarios sin pullear
     public class Cronner : ICronner
     {
 
