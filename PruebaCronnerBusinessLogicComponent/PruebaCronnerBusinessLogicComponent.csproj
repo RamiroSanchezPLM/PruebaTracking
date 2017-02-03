@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21848D17-3F5F-49C1-BB24-1179EF4FA5D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PruebaCronnerBusinessLogicComponent</RootNamespace>
+    <AssemblyName>PruebaCronnerBusinessLogicComponent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CronnerBLC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PLMClientsEngine\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\PLMClientsEngine\PLMClients.wsdl" />
+    <None Include="Service References\PLMClientsEngine\PLMClientsEngine.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PLMClientsEngine1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PLMClientsEngine2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.AgentDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.AgentsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.BannersByTargetInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.BranchDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CalculatorsDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ClientDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CodeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CommentsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CommentTypeDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CompanyClientsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CompanyUserConnectionsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ContactInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CountryInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.CountryMobileInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.EditionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ElectronicInformationByTargetInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.EventCategoryDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.EventsDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.LicenseClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.LicenseDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.LicensesInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.MedicalCalculatorsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.MobileClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.PharmacyProductsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.PharmacyUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.PhysicalActivityDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ProfessionClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ProfessionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.QuestionnaireDetailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.QuestionnairesInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ResidenceLevelsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ResultsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.SpecialityClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.SpecialityInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.StateInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.SummariesInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ToolsByTargetInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.ValidCodeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.WebApplicationUsersInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PLMClientsEngine\PruebaCronnerBusinessLogicComponent.PLMClientsEngine.WebClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PLMClientsEngine\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLMClientsEngine\PLMClientsEngine.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLMClientsEngine\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLMClientsEngine\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLMClientsEngine\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="145bc3a2-fa0f-4825-8f8c-f43db2417779" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/PLMLogsEngine/PLMLogsEngine.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PLMLogsEngine.xsd" MetadataType="Schema" ID="369acc56-c686-45cf-b37d-f1b4f33d69d6" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?xsd=xsd3" />
+    <MetadataFile FileName="PLMLogsEngine1.xsd" MetadataType="Schema" ID="8781b7da-35db-4d17-8ecd-dede41bfd237" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?xsd=xsd2" />
+    <MetadataFile FileName="PLMLogs.wsdl" MetadataType="Wsdl" ID="819439a8-06db-4e44-87b0-fb2b18aa8716" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?wsdl" />
+    <MetadataFile FileName="PLMLogsEngine4.xsd" MetadataType="Schema" ID="948dec6a-9c75-42fa-a077-b65ed236a510" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?xsd=xsd4" />
+    <MetadataFile FileName="PLMLogsEngine.disco" MetadataType="Disco" ID="630445d8-1032-4092-97cd-44a8e288bd37" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?disco" />
+    <MetadataFile FileName="PLMLogsEngine2.xsd" MetadataType="Schema" ID="237b530e-d15c-4be2-a57c-5cebafed89fa" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?xsd=xsd1" />
+    <MetadataFile FileName="PLMLogsEngine3.xsd" MetadataType="Schema" ID="8316467b-f435-4004-9875-e8363be77f27" SourceId="1" SourceUrl="http://localhost/PLMLogsEngine/PLMLogsEngine.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

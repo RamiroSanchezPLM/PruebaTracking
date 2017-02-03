@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" />
+  <xs:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="uploadDownloadClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="license" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hwidentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uploadDownloadClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="uploadDownloadClientResult" nillable="true" type="q1:LicenseClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q2:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q3:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="residenceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q4:Catalogs.EntrySources" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetOutput" type="q5:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="saveMobileClientResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMobileClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q6:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q7:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="residenceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMobileClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClientByLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q8:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q9:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="residenceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q10:Catalogs.EntrySources" />
+        <xs:element minOccurs="0" name="hwIdentifier" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q11:Catalogs.TargetOutputs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClientByLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="saveMobileClientByLicenseResult" nillable="true" type="q12:LicenseDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClientByAgeRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q13:char" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q14:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q15:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="residenceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q16:Catalogs.EntrySources" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetOutput" type="q17:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="age" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveMobileClientByAgeRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="saveMobileClientByAgeRangeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMobileClientByAgeRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q18:char" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q19:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q20:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="residenceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="age" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMobileClientByAgeRangeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="savePharmacyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="savePharmacyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="savePharmacyUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveWebClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sLastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entrySource" type="xs:int" />
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionId" type="xs:int" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="specialityId" type="xs:int" />
+        <xs:element minOccurs="0" name="otherSpeciality" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveWebClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="saveWebClientResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateWebClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" type="xs:int" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sLastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="birthday" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entrySource" type="xs:int" />
+        <xs:element minOccurs="0" name="profession" type="xs:int" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="specialityId" type="xs:int" />
+        <xs:element minOccurs="0" name="otherSpeciality" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateWebClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="calculatorId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCalculatorDetailResult" nillable="true" type="q21:CalculatorsDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResultByCalculator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="calculatorInfo" nillable="true" type="q22:CalculatorsDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResultByCalculatorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getResultByCalculatorResult" nillable="true" type="q23:ResultsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getQuestionnairesByPrefixResult" nillable="true" type="q24:ArrayOfQuestionnairesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" type="q25:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getQuestionnairesBySpecialityResult" nillable="true" type="q26:ArrayOfQuestionnairesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesByPrefixBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" type="q27:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnairesByPrefixBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getQuestionnairesByPrefixBySpecialityResult" nillable="true" type="q28:ArrayOfQuestionnairesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnaireDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionnaireId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getQuestionnaireDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getQuestionnaireDetailResult" nillable="true" type="q29:QuestionnaireDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSummariesByOption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="questionnaireId" type="xs:int" />
+        <xs:element minOccurs="0" name="optionId" type="xs:int" />
+        <xs:element minOccurs="0" name="order" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSummariesByOptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getSummariesByOptionResult" nillable="true" type="q30:ArrayOfSummariesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPharmacyUserConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateConnection" type="xs:dateTime" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="session" type="q31:Catalogs.Sessions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPharmacyUserConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addPharmacyUserConnectionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="connectionInfo" nillable="true" type="q32:CompanyUserConnectionsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addUserConnectionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userConnectionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getUserConnectionResult" nillable="true" type="q33:CompanyUserConnectionsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPharmacyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPharmacyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getPharmacyUserResult" nillable="true" type="q34:PharmacyUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionTime" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkSessionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPharmacyUserByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPharmacyUserByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getPharmacyUserByCodeResult" nillable="true" type="q35:PharmacyUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWebApplicationUserByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWebApplicationUserByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getWebApplicationUserByCodeResult" nillable="true" type="q36:WebApplicationUsersInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getContactResult" nillable="true" type="q37:ContactInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTerms">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTermsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getTermsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCountriesResult" nillable="true" type="q38:ArrayOfCountryInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="countryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCountryResult" nillable="true" type="q39:CountryInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStateByCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="countryId" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStateByCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getStateByCountryResult" nillable="true" type="q40:ArrayOfStateInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getStateResult" nillable="true" type="q41:StateInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEditionByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEditionByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getEditionByCodeResult" nillable="true" type="q42:EditionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountriesByTarget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q43:Catalogs.TargetOutputs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCountriesByTargetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCountriesByTargetResult" nillable="true" type="q44:ArrayOfCountryMobileInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhysicalActivitiesByCalculatorResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="calculatorId" type="xs:int" />
+        <xs:element minOccurs="0" name="resultId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhysicalActivitiesByCalculatorResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getPhysicalActivitiesByCalculatorResultResult" nillable="true" type="q45:ArrayOfPhysicalActivityDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveClientInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q46:Catalogs.Professions" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q47:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q48:Catalogs.EntrySources" />
+        <xs:element minOccurs="0" name="macAddresses" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveClientInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="saveClientInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClientInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q49:Catalogs.Professions" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q50:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q51:Catalogs.EntrySources" />
+        <xs:element minOccurs="0" name="macAddresses" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClientInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q52:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q53:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q54:Catalogs.EntrySources" />
+        <xs:element minOccurs="0" name="hwIdentifier" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q55:Catalogs.TargetOutputs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="saveClientResult" nillable="true" type="q56:LicenseDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q57:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q58:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveDownloadClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="slastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="profession" type="q59:Catalogs.Professions" />
+        <xs:element minOccurs="0" name="otherProfession" nillable="true" type="xs:string" />
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" nillable="true" type="q60:Catalogs.Specialities" />
+        <xs:element minOccurs="0" name="specialityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="professionalLicense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="source" type="q61:Catalogs.EntrySources" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q62:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="saveDownloadClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="saveDownloadClientResult" nillable="true" type="q63:LicensesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByIMEIResult" nillable="true" type="q64:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEIByISBN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEIByISBNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByIMEIByISBNResult" nillable="true" type="q65:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEIByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByIMEIByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByIMEIByPrefixResult" nillable="true" type="q66:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="validCodeResult" nillable="true" type="q67:ValidCodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activateCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activateCodeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkClientCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkClientCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkClientCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByEmailByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByEmailByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByEmailByPrefixResult" nillable="true" type="q68:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commentTypeId" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="branchId" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="businessUnitId" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="distributionId" type="xs:int" />
+        <xs:element minOccurs="0" name="prefixId" type="xs:int" />
+        <xs:element minOccurs="0" name="targetId" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertCommentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commentId" type="xs:int" />
+        <xs:element minOccurs="0" name="sentDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateCommentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCommentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCommentResult" nillable="true" type="q69:CommentsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCommentTypesByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q70:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCommentTypesByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCommentTypesByPrefixResult" nillable="true" type="q71:ArrayOfCommentTypeDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getToolsByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetId" type="q72:Catalogs.TargetOutputs" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="toolTypeId" type="q73:Catalogs.ElectronicToolTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getToolsByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getToolsByCodeResult" nillable="true" type="q74:ArrayOfToolsByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBannersByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetId" type="q75:Catalogs.TargetOutputs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBannersByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getBannersByCodeResult" nillable="true" type="q76:ArrayOfBannersByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="informationType" type="q77:Catalogs.ElectronicInformationTypes" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationByTypeResult" nillable="true" type="q78:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationByPrefixResult" nillable="true" type="q79:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByTarget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetId" type="q80:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByTargetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationByPrefixByTargetResult" nillable="true" type="q81:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetId" type="q82:Catalogs.TargetOutputs" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="informationTypeId" type="q83:Catalogs.ElectronicInformationTypes" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationByPrefixByTypeResult" nillable="true" type="q84:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationBySection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q85:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="section" type="q86:Catalogs.Sections" />
+        <xs:element minOccurs="0" name="resolutionKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationBySectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationBySectionResult" nillable="true" type="q87:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByTypeBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="targetId" type="q88:Catalogs.TargetOutputs" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="informationTypeId" type="q89:Catalogs.ElectronicInformationTypes" />
+        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="specialityId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInformationByPrefixByTypeBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getInformationByPrefixByTypeBySpecialityResult" nillable="true" type="q90:ArrayOfElectronicInformationByTargetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEventsByTypeBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="typeId" type="q91:Catalogs.EventTypes" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="specialityId" type="q92:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEventsByTypeBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getEventsByTypeBySpecialityResult" nillable="true" type="q93:ArrayOfEventsDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEventCategoriesByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q94:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="stateId" type="xs:int" />
+        <xs:element minOccurs="0" name="latitude" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="longitude" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEventCategoriesByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getEventCategoriesByStateResult" nillable="true" type="q95:ArrayOfEventCategoryDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOtherEventStates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="target" type="q96:Catalogs.TargetOutputs" />
+        <xs:element minOccurs="0" name="stateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOtherEventStatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getOtherEventStatesResult" nillable="true" type="q97:ArrayOfStateInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getLicenseResult" nillable="true" type="q98:LicensesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLicenseByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLicenseByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getLicenseByKeyResult" nillable="true" type="q99:LicensesInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUrlVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUrlVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getUrlVersionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCalculatorsByPrefixResult" nillable="true" type="q100:ArrayOfMedicalCalculatorsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" type="q101:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCalculatorsBySpecialityResult" nillable="true" type="q102:ArrayOfMedicalCalculatorsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsByPrefixBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" type="q103:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalculatorsByPrefixBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCalculatorsByPrefixBySpecialityResult" nillable="true" type="q104:ArrayOfMedicalCalculatorsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getAgentResult" nillable="true" type="q105:AgentsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentsByBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentsByBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getAgentsByBranchResult" nillable="true" type="q106:ArrayOfAgentsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentByZone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zoneId" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentByZoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getAgentByZoneResult" nillable="true" type="q107:AgentsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentDetailByZone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zoneId" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentDetailByZoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getAgentDetailByZoneResult" nillable="true" type="q108:AgentDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCompanyClientsByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCompanyClientsByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCompanyClientsByPrefixResult" nillable="true" type="q109:ArrayOfCompanyClientsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCloseBranches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientLatitude" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientLongitude" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCloseBranchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCloseBranchesResult" nillable="true" type="q110:ArrayOfBranchDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCloseBranchesByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientLatitude" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientLongitude" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCloseBranchesByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCloseBranchesByPrefixResult" nillable="true" type="q111:ArrayOfBranchDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBranchesByPrefixByText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codePrefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stateId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="companyClients" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBranchesByPrefixByTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getBranchesByPrefixByTextResult" nillable="true" type="q112:ArrayOfBranchDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getBranchResult" nillable="true" type="q113:BranchDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductsByCompanyByText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companyClientId" type="xs:int" />
+        <xs:element minOccurs="0" name="textSearch" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductsByCompanyByTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getProductsByCompanyByTextResult" nillable="true" type="q114:ArrayOfPharmacyProductsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductsByBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="branchId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductsByBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getProductsByBranchResult" nillable="true" type="q115:ArrayOfPharmacyProductsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientResult" nillable="true" type="q116:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByCompleteName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="completeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByCompleteNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByCompleteNameResult" nillable="true" type="q117:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByCodeResult" nillable="true" type="q118:ClientDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByEmailResult" nillable="true" type="q119:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByIMEI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByIMEIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByIMEIResult" nillable="true" type="q120:MobileClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByIMEIByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IMEI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByIMEIByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByIMEIByPrefixResult" nillable="true" type="q121:MobileClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfessions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getProfessionsResult" nillable="true" type="q122:ArrayOfProfessionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="professionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getProfessionResult" nillable="true" type="q123:ProfessionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecialities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="professionId" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecialitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getSpecialitiesResult" nillable="true" type="q124:ArrayOfSpecialityInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfessionByClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProfessionByClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getProfessionByClientResult" nillable="true" type="q125:ProfessionClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecialityByClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpecialityByClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getSpecialityByClientResult" nillable="true" type="q126:SpecialityClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByEmailByPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientByEmailByPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientByEmailByPasswordResult" nillable="true" type="q127:WebClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResidenceLevelsBySpeciality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="speciality" type="q128:Catalogs.Specialities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResidenceLevelsBySpecialityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getResidenceLevelsBySpecialityResult" nillable="true" type="q129:ArrayOfResidenceLevelsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientDetailByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClientDetailByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getClientDetailByEmailResult" nillable="true" type="q130:ClientDetailInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeResult" nillable="true" type="q131:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByCodeString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByCodeStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByCodeStringResult" nillable="true" type="q132:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByPrefix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prefixId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCodeByPrefixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" minOccurs="0" name="getCodeByPrefixResult" nillable="true" type="q133:CodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

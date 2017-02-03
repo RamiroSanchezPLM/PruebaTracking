@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PLMClients" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPLMClients_uploadDownloadClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadDownloadClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_uploadDownloadClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadDownloadClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateMobileClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMobileClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateMobileClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMobileClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClientByLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClientByLicense" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClientByLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClientByLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClientByAgeRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClientByAgeRange" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveMobileClientByAgeRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveMobileClientByAgeRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateMobileClientByAgeRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMobileClientByAgeRange" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateMobileClientByAgeRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMobileClientByAgeRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_savePharmacyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:savePharmacyUser" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_savePharmacyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:savePharmacyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveWebClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveWebClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveWebClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveWebClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateWebClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateWebClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateWebClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateWebClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getResultByCalculator_InputMessage">
+    <wsdl:part name="parameters" element="tns:getResultByCalculator" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getResultByCalculator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getResultByCalculatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesByPrefixBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesByPrefixBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnairesByPrefixBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnairesByPrefixBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnaireDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnaireDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getQuestionnaireDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getQuestionnaireDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSummariesByOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSummariesByOption" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSummariesByOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSummariesByOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_addPharmacyUserConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPharmacyUserConnection" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_addPharmacyUserConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPharmacyUserConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_addUserConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:addUserConnection" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_addUserConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addUserConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getUserConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserConnection" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getUserConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPharmacyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPharmacyUser" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPharmacyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPharmacyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_checkSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkSession" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_checkSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPharmacyUserByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPharmacyUserByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPharmacyUserByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPharmacyUserByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getWebApplicationUserByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getWebApplicationUserByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getWebApplicationUserByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getWebApplicationUserByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:getContact" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getTerms_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTerms" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getTerms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCountries" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCountry" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getStateByCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStateByCountry" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getStateByCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStateByCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getState_InputMessage">
+    <wsdl:part name="parameters" element="tns:getState" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEditionByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEditionByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEditionByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEditionByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountriesByTarget_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCountriesByTarget" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCountriesByTarget_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCountriesByTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPhysicalActivitiesByCalculatorResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPhysicalActivitiesByCalculatorResult" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getPhysicalActivitiesByCalculatorResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPhysicalActivitiesByCalculatorResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveClientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveClientInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveClientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveClientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateClientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateClientInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateClientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateClientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveDownloadClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveDownloadClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_saveDownloadClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveDownloadClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEI_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEI" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEIByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEIByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEIByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEIByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEIByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEIByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByIMEIByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByIMEIByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_validCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:validCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_validCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_activateCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:activateCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_activateCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:activateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_checkClientCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkClientCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_checkClientCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkClientCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByEmailByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByEmailByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByEmailByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByEmailByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_insertComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertComment" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_insertComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateComment" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_updateComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:getComment" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCommentTypesByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentTypesByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCommentTypesByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommentTypesByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getToolsByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getToolsByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getToolsByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getToolsByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBannersByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBannersByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBannersByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBannersByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByType" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByTarget_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByTarget" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByTarget_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByType" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationBySection_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationBySection" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationBySection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationBySectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByTypeBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByTypeBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getInformationByPrefixByTypeBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInformationByPrefixByTypeBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEventsByTypeBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEventsByTypeBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEventsByTypeBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventsByTypeBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEventCategoriesByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEventCategoriesByState" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getEventCategoriesByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventCategoriesByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getOtherEventStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOtherEventStates" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getOtherEventStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOtherEventStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLicense" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getLicenseByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLicenseByKey" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getLicenseByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLicenseByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getUrlVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUrlVersion" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getUrlVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUrlVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsByPrefixBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsByPrefixBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCalculatorsByPrefixBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalculatorsByPrefixBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAgent" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentsByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentsByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentsByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentsByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentByZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentByZone" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentByZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentByZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentDetailByZone_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentDetailByZone" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getAgentDetailByZone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentDetailByZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCompanyClientsByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCompanyClientsByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCompanyClientsByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCompanyClientsByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCloseBranches_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCloseBranches" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCloseBranches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCloseBranchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCloseBranchesByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCloseBranchesByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCloseBranchesByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCloseBranchesByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBranchesByPrefixByText_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBranchesByPrefixByText" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBranchesByPrefixByText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBranchesByPrefixByTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBranch" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProductsByCompanyByText_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsByCompanyByText" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProductsByCompanyByText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsByCompanyByTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProductsByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProductsByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByCompleteName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByCompleteName" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByCompleteName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByCompleteNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByIMEI_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByIMEI" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByIMEI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByIMEIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByIMEIByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByIMEIByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByIMEIByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByIMEIByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProfessions" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProfessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfession_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProfession" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProfessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSpecialities_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecialities" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSpecialities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecialitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfessionByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProfessionByClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getProfessionByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProfessionByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSpecialityByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecialityByClient" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getSpecialityByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecialityByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByEmailByPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByEmailByPassword" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientByEmailByPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientByEmailByPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getResidenceLevelsBySpeciality_InputMessage">
+    <wsdl:part name="parameters" element="tns:getResidenceLevelsBySpeciality" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getResidenceLevelsBySpeciality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getResidenceLevelsBySpecialityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientDetailByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClientDetailByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getClientDetailByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClientDetailByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCode" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByCodeString_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByCodeString" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByCodeString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByCodeStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByPrefix_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByPrefix" />
+  </wsdl:message>
+  <wsdl:message name="IPLMClients_getCodeByPrefix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCodeByPrefixResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPLMClients">
+    <wsdl:operation name="uploadDownloadClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/uploadDownloadClient" message="tns:IPLMClients_uploadDownloadClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/uploadDownloadClientResponse" message="tns:IPLMClients_uploadDownloadClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClient" message="tns:IPLMClients_saveMobileClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClientResponse" message="tns:IPLMClients_saveMobileClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMobileClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateMobileClient" message="tns:IPLMClients_updateMobileClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateMobileClientResponse" message="tns:IPLMClients_updateMobileClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClientByLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClientByLicense" message="tns:IPLMClients_saveMobileClientByLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClientByLicenseResponse" message="tns:IPLMClients_saveMobileClientByLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClientByAgeRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClientByAgeRange" message="tns:IPLMClients_saveMobileClientByAgeRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveMobileClientByAgeRangeResponse" message="tns:IPLMClients_saveMobileClientByAgeRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMobileClientByAgeRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateMobileClientByAgeRange" message="tns:IPLMClients_updateMobileClientByAgeRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateMobileClientByAgeRangeResponse" message="tns:IPLMClients_updateMobileClientByAgeRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="savePharmacyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/savePharmacyUser" message="tns:IPLMClients_savePharmacyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/savePharmacyUserResponse" message="tns:IPLMClients_savePharmacyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveWebClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveWebClient" message="tns:IPLMClients_saveWebClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveWebClientResponse" message="tns:IPLMClients_saveWebClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateWebClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateWebClient" message="tns:IPLMClients_updateWebClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateWebClientResponse" message="tns:IPLMClients_updateWebClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorDetail" message="tns:IPLMClients_getCalculatorDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorDetailResponse" message="tns:IPLMClients_getCalculatorDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getResultByCalculator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getResultByCalculator" message="tns:IPLMClients_getResultByCalculator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getResultByCalculatorResponse" message="tns:IPLMClients_getResultByCalculator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesByPrefix" message="tns:IPLMClients_getQuestionnairesByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesByPrefixResponse" message="tns:IPLMClients_getQuestionnairesByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesBySpeciality" message="tns:IPLMClients_getQuestionnairesBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesBySpecialityResponse" message="tns:IPLMClients_getQuestionnairesBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesByPrefixBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesByPrefixBySpeciality" message="tns:IPLMClients_getQuestionnairesByPrefixBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnairesByPrefixBySpecialityResponse" message="tns:IPLMClients_getQuestionnairesByPrefixBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnaireDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnaireDetail" message="tns:IPLMClients_getQuestionnaireDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getQuestionnaireDetailResponse" message="tns:IPLMClients_getQuestionnaireDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSummariesByOption">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getSummariesByOption" message="tns:IPLMClients_getSummariesByOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getSummariesByOptionResponse" message="tns:IPLMClients_getSummariesByOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPharmacyUserConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/addPharmacyUserConnection" message="tns:IPLMClients_addPharmacyUserConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/addPharmacyUserConnectionResponse" message="tns:IPLMClients_addPharmacyUserConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/addUserConnection" message="tns:IPLMClients_addUserConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/addUserConnectionResponse" message="tns:IPLMClients_addUserConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getUserConnection" message="tns:IPLMClients_getUserConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getUserConnectionResponse" message="tns:IPLMClients_getUserConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPharmacyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getPharmacyUser" message="tns:IPLMClients_getPharmacyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getPharmacyUserResponse" message="tns:IPLMClients_getPharmacyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/checkSession" message="tns:IPLMClients_checkSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/checkSessionResponse" message="tns:IPLMClients_checkSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPharmacyUserByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getPharmacyUserByCode" message="tns:IPLMClients_getPharmacyUserByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getPharmacyUserByCodeResponse" message="tns:IPLMClients_getPharmacyUserByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebApplicationUserByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getWebApplicationUserByCode" message="tns:IPLMClients_getWebApplicationUserByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getWebApplicationUserByCodeResponse" message="tns:IPLMClients_getWebApplicationUserByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getContact" message="tns:IPLMClients_getContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getContactResponse" message="tns:IPLMClients_getContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTerms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getTerms" message="tns:IPLMClients_getTerms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getTermsResponse" message="tns:IPLMClients_getTerms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCountries" message="tns:IPLMClients_getCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCountriesResponse" message="tns:IPLMClients_getCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCountry" message="tns:IPLMClients_getCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCountryResponse" message="tns:IPLMClients_getCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStateByCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getStateByCountry" message="tns:IPLMClients_getStateByCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getStateByCountryResponse" message="tns:IPLMClients_getStateByCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getState" message="tns:IPLMClients_getState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getStateResponse" message="tns:IPLMClients_getState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEditionByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getEditionByCode" message="tns:IPLMClients_getEditionByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getEditionByCodeResponse" message="tns:IPLMClients_getEditionByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountriesByTarget">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCountriesByTarget" message="tns:IPLMClients_getCountriesByTarget_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCountriesByTargetResponse" message="tns:IPLMClients_getCountriesByTarget_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPhysicalActivitiesByCalculatorResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getPhysicalActivitiesByCalculatorResult" message="tns:IPLMClients_getPhysicalActivitiesByCalculatorResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getPhysicalActivitiesByCalculatorResultResponse" message="tns:IPLMClients_getPhysicalActivitiesByCalculatorResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveClientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveClientInfo" message="tns:IPLMClients_saveClientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveClientInfoResponse" message="tns:IPLMClients_saveClientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateClientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateClientInfo" message="tns:IPLMClients_updateClientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateClientInfoResponse" message="tns:IPLMClients_updateClientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveClient" message="tns:IPLMClients_saveClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveClientResponse" message="tns:IPLMClients_saveClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateClient" message="tns:IPLMClients_updateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateClientResponse" message="tns:IPLMClients_updateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveDownloadClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/saveDownloadClient" message="tns:IPLMClients_saveDownloadClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/saveDownloadClientResponse" message="tns:IPLMClients_saveDownloadClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEI" message="tns:IPLMClients_getCodeByIMEI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEIResponse" message="tns:IPLMClients_getCodeByIMEI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEIByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEIByISBN" message="tns:IPLMClients_getCodeByIMEIByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEIByISBNResponse" message="tns:IPLMClients_getCodeByIMEIByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEIByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEIByPrefix" message="tns:IPLMClients_getCodeByIMEIByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByIMEIByPrefixResponse" message="tns:IPLMClients_getCodeByIMEIByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/validCode" message="tns:IPLMClients_validCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/validCodeResponse" message="tns:IPLMClients_validCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="activateCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/activateCode" message="tns:IPLMClients_activateCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/activateCodeResponse" message="tns:IPLMClients_activateCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkClientCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/checkClientCode" message="tns:IPLMClients_checkClientCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/checkClientCodeResponse" message="tns:IPLMClients_checkClientCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByEmailByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByEmailByPrefix" message="tns:IPLMClients_getCodeByEmailByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByEmailByPrefixResponse" message="tns:IPLMClients_getCodeByEmailByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/insertComment" message="tns:IPLMClients_insertComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/insertCommentResponse" message="tns:IPLMClients_insertComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/updateComment" message="tns:IPLMClients_updateComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/updateCommentResponse" message="tns:IPLMClients_updateComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getComment" message="tns:IPLMClients_getComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCommentResponse" message="tns:IPLMClients_getComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommentTypesByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCommentTypesByPrefix" message="tns:IPLMClients_getCommentTypesByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCommentTypesByPrefixResponse" message="tns:IPLMClients_getCommentTypesByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getToolsByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getToolsByCode" message="tns:IPLMClients_getToolsByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getToolsByCodeResponse" message="tns:IPLMClients_getToolsByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBannersByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getBannersByCode" message="tns:IPLMClients_getBannersByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getBannersByCodeResponse" message="tns:IPLMClients_getBannersByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationByType" message="tns:IPLMClients_getInformationByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationByTypeResponse" message="tns:IPLMClients_getInformationByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefix" message="tns:IPLMClients_getInformationByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixResponse" message="tns:IPLMClients_getInformationByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByTarget">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByTarget" message="tns:IPLMClients_getInformationByPrefixByTarget_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByTargetResponse" message="tns:IPLMClients_getInformationByPrefixByTarget_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByType" message="tns:IPLMClients_getInformationByPrefixByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByTypeResponse" message="tns:IPLMClients_getInformationByPrefixByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationBySection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationBySection" message="tns:IPLMClients_getInformationBySection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationBySectionResponse" message="tns:IPLMClients_getInformationBySection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByTypeBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByTypeBySpeciality" message="tns:IPLMClients_getInformationByPrefixByTypeBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getInformationByPrefixByTypeBySpecialityResponse" message="tns:IPLMClients_getInformationByPrefixByTypeBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventsByTypeBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getEventsByTypeBySpeciality" message="tns:IPLMClients_getEventsByTypeBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getEventsByTypeBySpecialityResponse" message="tns:IPLMClients_getEventsByTypeBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventCategoriesByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getEventCategoriesByState" message="tns:IPLMClients_getEventCategoriesByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getEventCategoriesByStateResponse" message="tns:IPLMClients_getEventCategoriesByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOtherEventStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getOtherEventStates" message="tns:IPLMClients_getOtherEventStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getOtherEventStatesResponse" message="tns:IPLMClients_getOtherEventStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getLicense" message="tns:IPLMClients_getLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getLicenseResponse" message="tns:IPLMClients_getLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseByKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getLicenseByKey" message="tns:IPLMClients_getLicenseByKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getLicenseByKeyResponse" message="tns:IPLMClients_getLicenseByKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUrlVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getUrlVersion" message="tns:IPLMClients_getUrlVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getUrlVersionResponse" message="tns:IPLMClients_getUrlVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsByPrefix" message="tns:IPLMClients_getCalculatorsByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsByPrefixResponse" message="tns:IPLMClients_getCalculatorsByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsBySpeciality" message="tns:IPLMClients_getCalculatorsBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsBySpecialityResponse" message="tns:IPLMClients_getCalculatorsBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsByPrefixBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsByPrefixBySpeciality" message="tns:IPLMClients_getCalculatorsByPrefixBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCalculatorsByPrefixBySpecialityResponse" message="tns:IPLMClients_getCalculatorsByPrefixBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getAgent" message="tns:IPLMClients_getAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getAgentResponse" message="tns:IPLMClients_getAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgentsByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getAgentsByBranch" message="tns:IPLMClients_getAgentsByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getAgentsByBranchResponse" message="tns:IPLMClients_getAgentsByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgentByZone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getAgentByZone" message="tns:IPLMClients_getAgentByZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getAgentByZoneResponse" message="tns:IPLMClients_getAgentByZone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgentDetailByZone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getAgentDetailByZone" message="tns:IPLMClients_getAgentDetailByZone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getAgentDetailByZoneResponse" message="tns:IPLMClients_getAgentDetailByZone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompanyClientsByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCompanyClientsByPrefix" message="tns:IPLMClients_getCompanyClientsByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCompanyClientsByPrefixResponse" message="tns:IPLMClients_getCompanyClientsByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCloseBranches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCloseBranches" message="tns:IPLMClients_getCloseBranches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCloseBranchesResponse" message="tns:IPLMClients_getCloseBranches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCloseBranchesByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCloseBranchesByPrefix" message="tns:IPLMClients_getCloseBranchesByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCloseBranchesByPrefixResponse" message="tns:IPLMClients_getCloseBranchesByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranchesByPrefixByText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getBranchesByPrefixByText" message="tns:IPLMClients_getBranchesByPrefixByText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getBranchesByPrefixByTextResponse" message="tns:IPLMClients_getBranchesByPrefixByText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getBranch" message="tns:IPLMClients_getBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getBranchResponse" message="tns:IPLMClients_getBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductsByCompanyByText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getProductsByCompanyByText" message="tns:IPLMClients_getProductsByCompanyByText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getProductsByCompanyByTextResponse" message="tns:IPLMClients_getProductsByCompanyByText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductsByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getProductsByBranch" message="tns:IPLMClients_getProductsByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getProductsByBranchResponse" message="tns:IPLMClients_getProductsByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClient" message="tns:IPLMClients_getClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientResponse" message="tns:IPLMClients_getClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByCompleteName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByCompleteName" message="tns:IPLMClients_getClientByCompleteName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByCompleteNameResponse" message="tns:IPLMClients_getClientByCompleteName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByCode" message="tns:IPLMClients_getClientByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByCodeResponse" message="tns:IPLMClients_getClientByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByEmail" message="tns:IPLMClients_getClientByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByEmailResponse" message="tns:IPLMClients_getClientByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByIMEI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByIMEI" message="tns:IPLMClients_getClientByIMEI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByIMEIResponse" message="tns:IPLMClients_getClientByIMEI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByIMEIByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByIMEIByPrefix" message="tns:IPLMClients_getClientByIMEIByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByIMEIByPrefixResponse" message="tns:IPLMClients_getClientByIMEIByPrefix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProfessions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getProfessions" message="tns:IPLMClients_getProfessions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getProfessionsResponse" message="tns:IPLMClients_getProfessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProfession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getProfession" message="tns:IPLMClients_getProfession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getProfessionResponse" message="tns:IPLMClients_getProfession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getSpecialities" message="tns:IPLMClients_getSpecialities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getSpecialitiesResponse" message="tns:IPLMClients_getSpecialities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProfessionByClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getProfessionByClient" message="tns:IPLMClients_getProfessionByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getProfessionByClientResponse" message="tns:IPLMClients_getProfessionByClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialityByClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getSpecialityByClient" message="tns:IPLMClients_getSpecialityByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getSpecialityByClientResponse" message="tns:IPLMClients_getSpecialityByClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientByEmailByPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientByEmailByPassword" message="tns:IPLMClients_getClientByEmailByPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientByEmailByPasswordResponse" message="tns:IPLMClients_getClientByEmailByPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getResidenceLevelsBySpeciality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getResidenceLevelsBySpeciality" message="tns:IPLMClients_getResidenceLevelsBySpeciality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getResidenceLevelsBySpecialityResponse" message="tns:IPLMClients_getResidenceLevelsBySpeciality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClientDetailByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getClientDetailByEmail" message="tns:IPLMClients_getClientDetailByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getClientDetailByEmailResponse" message="tns:IPLMClients_getClientDetailByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCode" message="tns:IPLMClients_getCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeResponse" message="tns:IPLMClients_getCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByCodeString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByCodeString" message="tns:IPLMClients_getCodeByCodeString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByCodeStringResponse" message="tns:IPLMClients_getCodeByCodeString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByPrefix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPLMClients/getCodeByPrefix" message="tns:IPLMClients_getCodeByPrefix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPLMClients/getCodeByPrefixResponse" message="tns:IPLMClients_getCodeByPrefix_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPLMClients" type="tns:IPLMClients">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uploadDownloadClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/uploadDownloadClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveMobileClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMobileClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateMobileClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClientByLicense">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveMobileClientByLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveMobileClientByAgeRange">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveMobileClientByAgeRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMobileClientByAgeRange">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateMobileClientByAgeRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="savePharmacyUser">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/savePharmacyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveWebClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveWebClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateWebClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateWebClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorDetail">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCalculatorDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getResultByCalculator">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getResultByCalculator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getQuestionnairesByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getQuestionnairesBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnairesByPrefixBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getQuestionnairesByPrefixBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQuestionnaireDetail">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getQuestionnaireDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSummariesByOption">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getSummariesByOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPharmacyUserConnection">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/addPharmacyUserConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserConnection">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/addUserConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserConnection">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getUserConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPharmacyUser">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getPharmacyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkSession">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/checkSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPharmacyUserByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getPharmacyUserByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWebApplicationUserByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getWebApplicationUserByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContact">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTerms">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getTerms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountry">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStateByCountry">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getStateByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getState">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEditionByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getEditionByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountriesByTarget">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCountriesByTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPhysicalActivitiesByCalculatorResult">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getPhysicalActivitiesByCalculatorResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveClientInfo">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveClientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateClientInfo">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateClientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveDownloadClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/saveDownloadClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEI">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByIMEI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEIByISBN">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByIMEIByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByIMEIByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByIMEIByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/validCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/activateCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkClientCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/checkClientCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByEmailByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByEmailByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertComment">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/insertComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateComment">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/updateComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getComment">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCommentTypesByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCommentTypesByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getToolsByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getToolsByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBannersByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getBannersByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByType">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByTarget">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationByPrefixByTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByType">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationByPrefixByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationBySection">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationBySection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInformationByPrefixByTypeBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getInformationByPrefixByTypeBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventsByTypeBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getEventsByTypeBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventCategoriesByState">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getEventCategoriesByState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherEventStates">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getOtherEventStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicense">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLicenseByKey">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getLicenseByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrlVersion">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getUrlVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCalculatorsByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCalculatorsBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalculatorsByPrefixBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCalculatorsByPrefixBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgent">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgentsByBranch">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getAgentsByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgentByZone">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getAgentByZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgentDetailByZone">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getAgentDetailByZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompanyClientsByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCompanyClientsByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCloseBranches">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCloseBranches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCloseBranchesByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCloseBranchesByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranchesByPrefixByText">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getBranchesByPrefixByText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductsByCompanyByText">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getProductsByCompanyByText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductsByBranch">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getProductsByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByCompleteName">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByCompleteName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByEmail">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByIMEI">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByIMEI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByIMEIByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByIMEIByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfessions">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getProfessions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfession">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getProfession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialities">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getSpecialities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfessionByClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getProfessionByClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialityByClient">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getSpecialityByClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientByEmailByPassword">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientByEmailByPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getResidenceLevelsBySpeciality">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getResidenceLevelsBySpeciality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClientDetailByEmail">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getClientDetailByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCode">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByCodeString">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByCodeString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodeByPrefix">
+      <soap:operation soapAction="http://tempuri.org/IPLMClients/getCodeByPrefix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PLMClients">
+    <wsdl:port name="BasicHttpBinding_IPLMClients" binding="tns:BasicHttpBinding_IPLMClients">
+      <soap:address location="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

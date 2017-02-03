@@ -1,0 +1,8 @@
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\bin\Debug\WCFCronner.dll.config
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\bin\Debug\WCFCronner.dll
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\bin\Debug\WCFCronner.pdb
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\bin\Debug\PruebaCronnerBusinessLogicComponent.dll
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\bin\Debug\PruebaCronnerBusinessLogicComponent.pdb
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\obj\Debug\WCFCronner.dll
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WCFCronner\obj\Debug\WCFCronner.pdb

@@ -1,0 +1,6 @@
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\bin\Debug\WS_CIIB_UNAM.exe.config
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\bin\Debug\WS_CIIB_UNAM.exe
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\bin\Debug\WS_CIIB_UNAM.pdb
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\obj\x86\Debug\WS_CIIB_UNAM.exe
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\WS_CIIB_UNAM\obj\x86\Debug\WS_CIIB_UNAM.pdb

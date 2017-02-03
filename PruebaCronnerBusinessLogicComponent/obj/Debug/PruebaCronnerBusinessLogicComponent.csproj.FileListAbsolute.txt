@@ -1,0 +1,6 @@
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\bin\Debug\PruebaCronnerBusinessLogicComponent.dll.config
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\bin\Debug\PruebaCronnerBusinessLogicComponent.dll
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\bin\Debug\PruebaCronnerBusinessLogicComponent.pdb
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\obj\Debug\PruebaCronnerBusinessLogicComponent.dll
+C:\Users\ramiro.sanchez\Documents\Visual Studio 2010\Projects\PruebaTracking\PruebaCronnerBusinessLogicComponent\obj\Debug\PruebaCronnerBusinessLogicComponent.pdb

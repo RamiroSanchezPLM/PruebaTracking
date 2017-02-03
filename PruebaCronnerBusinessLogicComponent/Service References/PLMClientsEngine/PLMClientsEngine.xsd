@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PLMClientsBusinessEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="LicenseClientInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ClientInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherProfession" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherSpeciality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Profession" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfessionalLicense" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Speciality" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LicenseClientInfo" nillable="true" type="tns:LicenseClientInfo" />
+  <xs:complexType name="ClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompleteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrySourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="ser:char" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientInfo" nillable="true" type="tns:ClientInfo" />
+  <xs:simpleType name="Catalogs.Professions">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AGRONOMO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BIOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DISTRIBUIDOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ENFERMERO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INGENIERO_EN_ALIMENTOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INGENIERO_QUIMICO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICO_VETERINARIO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ODONTOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OTRA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PARAMEDICO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PSICOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="QUIMICO_BIOLOGO_PARASITOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="QUIMICO_FARMACOBIOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TECNICO_LABORATORISTA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TECNICO_RADIOLOGO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ASOCIACION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FARMACIA_VETERINARIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVESTIGADOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PRODUCTOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNIVERSIDAD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PROFESIONAL_DE_LA_SALUD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PACIENTE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.Professions" nillable="true" type="tns:Catalogs.Professions" />
+  <xs:simpleType name="Catalogs.Specialities">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALERGOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANDROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANESTESIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANGIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BARIATRIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CARDIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">37</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CIRUGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="COLOPROCTOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DERMATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DIABETOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">41</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ENDOCRINOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ENDOSCOPIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EPIDEMIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ESTOMATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FARMACOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">46</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GASTROENTEROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">47</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GERONTOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">48</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GERIATRIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">49</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GINECOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">50</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HEMATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">51</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INFECTOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">52</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INMUNOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">53</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_CRITICA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">54</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_DE_REHABILITACION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">55</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_DEL_DEPORTE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">56</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_FAMILIAR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">57</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_GENERAL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">58</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_INTERNA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_NUCLEAR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NEFROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">61</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NEONATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">62</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NEUMOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">63</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NEUROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">64</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NUTRIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OFTALMOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">66</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ONCOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">67</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ORTOPEDIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">68</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OTORRINOLARINGOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">69</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">70</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PEDIATRIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">71</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PSIQUIATRIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">72</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RADIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">73</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REUMATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">74</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TRAUMATOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">75</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">76</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_INTENSIVA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MEDICINA_DE_URGENCIAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">78</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OTRA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">79</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANALISIS_CLINICOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">80</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANATOMIA_PATOLOGICA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BACTERIOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">82</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ECOGRAFIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">83</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ETOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">84</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GENETICA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OBSTETRICIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ODONTOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PARASITOLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REPRODUCCION_ANIMAL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">89</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SALUD_PUBLICA_Y_CONTROL_ALIMENTARIO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">90</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VIROLOGIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">91</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.Specialities" nillable="true" type="tns:Catalogs.Specialities" />
+  <xs:simpleType name="Catalogs.EntrySources">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Portal_PLM_2010">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONEXIFARMA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DISPOSITIVO_MOVIL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CLIENTE_SERVIDOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.EntrySources" nillable="true" type="tns:Catalogs.EntrySources" />
+  <xs:simpleType name="Catalogs.TargetOutputs">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cliente_Servidor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Web">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Android">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BlackBerry">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="iOS_iPhone">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="iOS_iPad">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Servidor_Servidor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Windows_Phone">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.TargetOutputs" nillable="true" type="tns:Catalogs.TargetOutputs" />
+  <xs:complexType name="LicenseDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DistributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="FinalDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InitialDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LicenseId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrefixId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrefixName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LicenseDetailInfo" nillable="true" type="tns:LicenseDetailInfo" />
+  <xs:complexType name="CalculatorsDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalculatorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorFormula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorId" type="xs:int" />
+      <xs:element minOccurs="0" name="CalculatorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorReferences" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SQLSyntax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariablesList" nillable="true" type="tns:ArrayOfVariablesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculatorsDetailInfo" nillable="true" type="tns:CalculatorsDetailInfo" />
+  <xs:complexType name="ArrayOfVariablesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VariablesInfo" nillable="true" type="tns:VariablesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVariablesInfo" nillable="true" type="tns:ArrayOfVariablesInfo" />
+  <xs:complexType name="VariablesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nomenclature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariableId" type="xs:int" />
+      <xs:element minOccurs="0" name="VariableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariableValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VariablesInfo" nillable="true" type="tns:VariablesInfo" />
+  <xs:complexType name="ResultsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FinalResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LowerRange" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ResultDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpperRange" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultsInfo" nillable="true" type="tns:ResultsInfo" />
+  <xs:complexType name="ArrayOfQuestionnairesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuestionnairesInfo" nillable="true" type="tns:QuestionnairesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestionnairesInfo" nillable="true" type="tns:ArrayOfQuestionnairesInfo" />
+  <xs:complexType name="QuestionnairesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QuestionnaireDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionnaireId" type="xs:int" />
+      <xs:element minOccurs="0" name="QuestionnaireInstructions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionnaireName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionnaireReferences" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebPage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestionnairesInfo" nillable="true" type="tns:QuestionnairesInfo" />
+  <xs:complexType name="QuestionnaireDetailInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QuestionnairesInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OptionList" nillable="true" type="tns:ArrayOfOptionsInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QuestionnaireDetailInfo" nillable="true" type="tns:QuestionnaireDetailInfo" />
+  <xs:complexType name="ArrayOfOptionsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OptionsInfo" nillable="true" type="tns:OptionsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOptionsInfo" nillable="true" type="tns:ArrayOfOptionsInfo" />
+  <xs:complexType name="OptionsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OptionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionId" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OptionsInfo" nillable="true" type="tns:OptionsInfo" />
+  <xs:complexType name="ArrayOfSummariesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SummariesInfo" nillable="true" type="tns:SummariesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSummariesInfo" nillable="true" type="tns:ArrayOfSummariesInfo" />
+  <xs:complexType name="SummariesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SummaryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SummaryId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SummariesInfo" nillable="true" type="tns:SummariesInfo" />
+  <xs:simpleType name="Catalogs.Sessions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ABIERTA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CERRADA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.Sessions" nillable="true" type="tns:Catalogs.Sessions" />
+  <xs:complexType name="CompanyUserConnectionsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="DateConnection" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DistributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="UserConnectionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyUserConnectionsInfo" nillable="true" type="tns:CompanyUserConnectionsInfo" />
+  <xs:complexType name="PharmacyUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PharmacyUserInfo" nillable="true" type="tns:PharmacyUserInfo" />
+  <xs:complexType name="WebApplicationUsersInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CCTypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CCTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebApplicationUsersInfo" nillable="true" type="tns:WebApplicationUsersInfo" />
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+  <xs:complexType name="ArrayOfCountryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryInfo" nillable="true" type="tns:CountryInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountryInfo" nillable="true" type="tns:ArrayOfCountryInfo" />
+  <xs:complexType name="CountryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountryInfo" nillable="true" type="tns:CountryInfo" />
+  <xs:complexType name="ArrayOfStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StateInfo" nillable="true" type="tns:StateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStateInfo" nillable="true" type="tns:ArrayOfStateInfo" />
+  <xs:complexType name="StateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StateInfo" nillable="true" type="tns:StateInfo" />
+  <xs:complexType name="EditionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookId" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="EditionId" type="xs:int" />
+      <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberEdition" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditionInfo" nillable="true" type="tns:EditionInfo" />
+  <xs:complexType name="ArrayOfCountryMobileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryMobileInfo" nillable="true" type="tns:CountryMobileInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountryMobileInfo" nillable="true" type="tns:ArrayOfCountryMobileInfo" />
+  <xs:complexType name="CountryMobileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CSSUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentImagesUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditionId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Menues" nillable="true" type="tns:ArrayOfMobileMenuesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountryMobileInfo" nillable="true" type="tns:CountryMobileInfo" />
+  <xs:complexType name="ArrayOfMobileMenuesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MobileMenuesInfo" nillable="true" type="tns:MobileMenuesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMobileMenuesInfo" nillable="true" type="tns:ArrayOfMobileMenuesInfo" />
+  <xs:complexType name="MobileMenuesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditionId" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="MenuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OSMobileId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Order" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileMenuesInfo" nillable="true" type="tns:MobileMenuesInfo" />
+  <xs:complexType name="ArrayOfPhysicalActivityDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalActivityDetailInfo" nillable="true" type="tns:PhysicalActivityDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalActivityDetailInfo" nillable="true" type="tns:ArrayOfPhysicalActivityDetailInfo" />
+  <xs:complexType name="PhysicalActivityDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ActivityImages" nillable="true" type="tns:ArrayOfActivityImagesInfo" />
+      <xs:element minOccurs="0" name="ActivityItems" nillable="true" type="tns:ArrayOfItemDetailInfo" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalActivityDetailInfo" nillable="true" type="tns:PhysicalActivityDetailInfo" />
+  <xs:complexType name="ArrayOfActivityImagesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityImagesInfo" nillable="true" type="tns:ActivityImagesInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityImagesInfo" nillable="true" type="tns:ArrayOfActivityImagesInfo" />
+  <xs:complexType name="ActivityImagesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActivityId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageId" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActivityImagesInfo" nillable="true" type="tns:ActivityImagesInfo" />
+  <xs:complexType name="ArrayOfItemDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemDetailInfo" nillable="true" type="tns:ItemDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemDetailInfo" nillable="true" type="tns:ArrayOfItemDetailInfo" />
+  <xs:complexType name="ItemDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemDetailInfo" nillable="true" type="tns:ItemDetailInfo" />
+  <xs:complexType name="LicensesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CurrentInstallation" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Duration" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LicenseId" type="xs:int" />
+      <xs:element minOccurs="0" name="LicenseKey" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LicensesInfo" nillable="true" type="tns:LicensesInfo" />
+  <xs:complexType name="CodeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Assign" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeStatusId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CodeString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrefixId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CodeInfo" nillable="true" type="tns:CodeInfo" />
+  <xs:complexType name="ValidCodeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeStatusId" type="tns:Catalogs.CodeStatus" />
+      <xs:element minOccurs="0" name="IsExist" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidCodeInfo" nillable="true" type="tns:ValidCodeInfo" />
+  <xs:simpleType name="Catalogs.CodeStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NO_EXISTE" />
+      <xs:enumeration value="INACTIVO" />
+      <xs:enumeration value="ACTIVO" />
+      <xs:enumeration value="CADUCO" />
+      <xs:enumeration value="CANCELADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.CodeStatus" nillable="true" type="tns:Catalogs.CodeStatus" />
+  <xs:complexType name="CommentsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BusinessUnitId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CommentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CommentId" type="xs:int" />
+      <xs:element minOccurs="0" name="CommentTypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="PrefixId" type="xs:int" />
+      <xs:element minOccurs="0" name="SentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommentsInfo" nillable="true" type="tns:CommentsInfo" />
+  <xs:complexType name="ArrayOfCommentTypeDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommentTypeDetailInfo" nillable="true" type="tns:CommentTypeDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommentTypeDetailInfo" nillable="true" type="tns:ArrayOfCommentTypeDetailInfo" />
+  <xs:complexType name="CommentTypeDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BUnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessUnitId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CommentTypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DistributionId" type="xs:int" />
+      <xs:element minOccurs="0" name="DistributionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrefixId" type="xs:int" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="TargetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommentTypeDetailInfo" nillable="true" type="tns:CommentTypeDetailInfo" />
+  <xs:simpleType name="Catalogs.ElectronicToolTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Notas_Médicas">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sitios_PLM">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sitios_Externos">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.ElectronicToolTypes" nillable="true" type="tns:Catalogs.ElectronicToolTypes" />
+  <xs:complexType name="ArrayOfToolsByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ToolsByTargetInfo" nillable="true" type="tns:ToolsByTargetInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfToolsByTargetInfo" nillable="true" type="tns:ArrayOfToolsByTargetInfo" />
+  <xs:complexType name="ToolsByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BannerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BannerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BannerUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublishedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ToolDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToolId" type="xs:int" />
+      <xs:element minOccurs="0" name="ToolOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="ToolTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ToolsByTargetInfo" nillable="true" type="tns:ToolsByTargetInfo" />
+  <xs:complexType name="ArrayOfBannersByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BannersByTargetInfo" nillable="true" type="tns:BannersByTargetInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBannersByTargetInfo" nillable="true" type="tns:ArrayOfBannersByTargetInfo" />
+  <xs:complexType name="BannersByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BannerDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BannerId" type="xs:int" />
+      <xs:element minOccurs="0" name="BannerOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BannersByTargetInfo" nillable="true" type="tns:BannersByTargetInfo" />
+  <xs:simpleType name="Catalogs.ElectronicInformationTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Notas_Medicas">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sitios_Web">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Abstracts">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Banners">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Atlas">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Articulos_Cientificos">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Refencias_Medicas">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Promociones">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Guias_de_Practica_Clinica">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Videos_Interes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dietas_Hombres">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dietas_Mujeres">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.ElectronicInformationTypes" nillable="true" type="tns:Catalogs.ElectronicInformationTypes" />
+  <xs:complexType name="ArrayOfElectronicInformationByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ElectronicInformationByTargetInfo" nillable="true" type="tns:ElectronicInformationByTargetInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfElectronicInformationByTargetInfo" nillable="true" type="tns:ArrayOfElectronicInformationByTargetInfo" />
+  <xs:complexType name="ElectronicInformationByTargetInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="ElectronicDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElectronicId" type="xs:int" />
+      <xs:element minOccurs="0" name="ElectronicTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HTMLFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoTypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PublishedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ResolutionBaseUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElectronicInformationByTargetInfo" nillable="true" type="tns:ElectronicInformationByTargetInfo" />
+  <xs:simpleType name="Catalogs.Sections">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INDICES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MENUS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOVEDADES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OPCIONES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RESULTADOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VINCULOS_DE_INTERES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BANNERS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NOTICIAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PLMONLINE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EDITORIAL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SERVICIOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ATLAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ARTICULOS_CIENTIFICOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ESQUEMAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FARMACIAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REPRESENTANTES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REFERENCIAS_MEDICAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BUSCADOR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CALCULADORAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PROGRAMAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONFIGURACION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EVENTOS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BUSCADOR_REGIONAL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GUIAS_CLINICAS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.Sections" nillable="true" type="tns:Catalogs.Sections" />
+  <xs:simpleType name="Catalogs.EventTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Congresos">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Catalogs.EventTypes" nillable="true" type="tns:Catalogs.EventTypes" />
+  <xs:complexType name="ArrayOfEventsDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventsDetailInfo" nillable="true" type="tns:EventsDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventsDetailInfo" nillable="true" type="tns:ArrayOfEventsDetailInfo" />
+  <xs:complexType name="EventsDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddressId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventDistance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EventId" type="xs:int" />
+      <xs:element minOccurs="0" name="EventName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinalDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InitialDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InternalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Organizer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfessionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebPage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventsDetailInfo" nillable="true" type="tns:EventsDetailInfo" />
+  <xs:complexType name="ArrayOfEventCategoryDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventCategoryDetailInfo" nillable="true" type="tns:EventCategoryDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEventCategoryDetailInfo" nillable="true" type="tns:ArrayOfEventCategoryDetailInfo" />
+  <xs:complexType name="EventCategoryDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Events" nillable="true" type="tns:ArrayOfEventsDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventCategoryDetailInfo" nillable="true" type="tns:EventCategoryDetailInfo" />
+  <xs:complexType name="ArrayOfMedicalCalculatorsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalCalculatorsInfo" nillable="true" type="tns:MedicalCalculatorsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicalCalculatorsInfo" nillable="true" type="tns:ArrayOfMedicalCalculatorsInfo" />
+  <xs:complexType name="MedicalCalculatorsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CalculatorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorFormula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorId" type="xs:int" />
+      <xs:element minOccurs="0" name="CalculatorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalculatorReferences" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SQLSyntax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebPage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MedicalCalculatorsInfo" nillable="true" type="tns:MedicalCalculatorsInfo" />
+  <xs:complexType name="AgentsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentsInfo" nillable="true" type="tns:AgentsInfo" />
+  <xs:complexType name="ArrayOfAgentsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgentsInfo" nillable="true" type="tns:AgentsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgentsInfo" nillable="true" type="tns:ArrayOfAgentsInfo" />
+  <xs:complexType name="AgentDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PharmacyList" nillable="true" type="tns:ArrayOfBranchDetailInfo" />
+      <xs:element minOccurs="0" name="PhoneOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateHospitals" nillable="true" type="tns:ArrayOfBranchDetailInfo" />
+      <xs:element minOccurs="0" name="PublicHospitals" nillable="true" type="tns:ArrayOfBranchDetailInfo" />
+      <xs:element minOccurs="0" name="SecondLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentDetailInfo" nillable="true" type="tns:AgentDetailInfo" />
+  <xs:complexType name="ArrayOfBranchDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchDetailInfo" nillable="true" type="tns:BranchDetailInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchDetailInfo" nillable="true" type="tns:ArrayOfBranchDetailInfo" />
+  <xs:complexType name="BranchDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AttentionSchedules" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BranchDistance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BranchId" type="xs:int" />
+      <xs:element minOccurs="0" name="BranchKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DisplayPharmacies" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomeService" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogoDetail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PhoneOne" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneTwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebPage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchDetailInfo" nillable="true" type="tns:BranchDetailInfo" />
+  <xs:complexType name="ArrayOfCompanyClientsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyClientsInfo" nillable="true" type="tns:CompanyClientsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyClientsInfo" nillable="true" type="tns:ArrayOfCompanyClientsInfo" />
+  <xs:complexType name="CompanyClientsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CCTypeId" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyClientsInfo" nillable="true" type="tns:CompanyClientsInfo" />
+  <xs:complexType name="ArrayOfPharmacyProductsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PharmacyProductsInfo" nillable="true" type="tns:PharmacyProductsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPharmacyProductsInfo" nillable="true" type="tns:ArrayOfPharmacyProductsInfo" />
+  <xs:complexType name="PharmacyProductsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActiveSubstances" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Available" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BaseUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="Indications" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Laboratory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PharmaceuticalForms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Presentation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentationContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PharmacyProductsInfo" nillable="true" type="tns:PharmacyProductsInfo" />
+  <xs:complexType name="ClientDetailInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ClientInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherProfession" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherSpeciality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Profession" nillable="true" type="tns:ProfessionInfo" />
+          <xs:element minOccurs="0" name="ProfessionalLicense" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResidenceId" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="ResidenceKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Speciality" nillable="true" type="tns:SpecialityInfo" />
+          <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientDetailInfo" nillable="true" type="tns:ClientDetailInfo" />
+  <xs:complexType name="ProfessionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProfessionId" type="xs:short" />
+      <xs:element minOccurs="0" name="ProfessionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReqProfessionalLicense" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfessionInfo" nillable="true" type="tns:ProfessionInfo" />
+  <xs:complexType name="SpecialityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialityId" type="xs:short" />
+      <xs:element minOccurs="0" name="SpecialityName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialityInfo" nillable="true" type="tns:SpecialityInfo" />
+  <xs:complexType name="MobileClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompleteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntrySourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="ser:char" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OtherProfession" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Profession" type="tns:Catalogs.Professions" />
+      <xs:element minOccurs="0" name="ProfessionalLicense" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecondLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateShortName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobileClientInfo" nillable="true" type="tns:MobileClientInfo" />
+  <xs:complexType name="ArrayOfProfessionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfessionInfo" nillable="true" type="tns:ProfessionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfessionInfo" nillable="true" type="tns:ArrayOfProfessionInfo" />
+  <xs:complexType name="ArrayOfSpecialityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialityInfo" nillable="true" type="tns:SpecialityInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialityInfo" nillable="true" type="tns:ArrayOfSpecialityInfo" />
+  <xs:complexType name="ProfessionClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherProfession" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfessionId" type="xs:short" />
+      <xs:element minOccurs="0" name="ProfessionalLicense" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfessionClientInfo" nillable="true" type="tns:ProfessionClientInfo" />
+  <xs:complexType name="SpecialityClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherSpeciality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialityId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialityClientInfo" nillable="true" type="tns:SpecialityClientInfo" />
+  <xs:complexType name="WebClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CodeString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebClientInfo" nillable="true" type="tns:WebClientInfo" />
+  <xs:complexType name="ArrayOfResidenceLevelsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResidenceLevelsInfo" nillable="true" type="tns:ResidenceLevelsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResidenceLevelsInfo" nillable="true" type="tns:ArrayOfResidenceLevelsInfo" />
+  <xs:complexType name="ResidenceLevelsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResidenceId" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ResidenceKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResidenceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResidenceLevelsInfo" nillable="true" type="tns:ResidenceLevelsInfo" />
+</xs:schema>

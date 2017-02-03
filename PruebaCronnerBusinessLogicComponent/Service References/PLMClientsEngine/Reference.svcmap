@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6482e9e-a034-40b6-a104-682d82c80832" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PLMClients.wsdl" MetadataType="Wsdl" ID="3950d107-95a2-4226-92e4-9384d86c0aea" SourceId="1" SourceUrl="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?wsdl" />
+    <MetadataFile FileName="PLMClientsEngine.xsd" MetadataType="Schema" ID="32324c44-f0e9-4e85-a0b6-4be27b0020f0" SourceId="1" SourceUrl="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd2" />
+    <MetadataFile FileName="PLMClientsEngine1.xsd" MetadataType="Schema" ID="a7f7bbd2-40a7-4657-845d-0f76eeb77dd3" SourceId="1" SourceUrl="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd0" />
+    <MetadataFile FileName="PLMClientsEngine.disco" MetadataType="Disco" ID="80fc843c-2d44-4d1a-a02e-481aa8211e7a" SourceId="1" SourceUrl="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?disco" />
+    <MetadataFile FileName="PLMClientsEngine2.xsd" MetadataType="Schema" ID="2910b1d5-19a4-42be-8ed3-79d3151b1ec7" SourceId="1" SourceUrl="http://200.66.72.94/PLMClientsManager/PLMClientsEngine.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,6 @@
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\bin\Debug\PruebaTracking.exe.config
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\bin\Debug\PruebaTracking.exe
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\bin\Debug\PruebaTracking.pdb
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\obj\x86\Debug\PruebaTracking.exe
+c:\users\ramiro.sanchez\documents\visual studio 2010\Projects\PruebaTracking\PruebaTracking\obj\x86\Debug\PruebaTracking.pdb
